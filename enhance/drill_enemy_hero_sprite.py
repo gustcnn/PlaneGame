@@ -16,7 +16,7 @@ hero_y = 400
 plane_width = 100
 plane_height = 124
 object_path=os.path.dirname(os.path.dirname(__file__))
-window=GameWindow(screen_x,screen_y,object_path + "/images/bg.jpg")
+window=GameWindow(object_path + "/images/bg.jpg",(screen_x,screen_y))
 screen=window.screen
 object_path = os.path.dirname(os.path.dirname(__file__))
 #加载背景图片
@@ -26,8 +26,7 @@ clock = pygame.time.Clock()
 enemy_01 = GameSprite(object_path + "/images/enemy0.png", 1)
 enemy_02 = GameSprite(object_path + "/images/enemy1.png", 2)
 enemy_group = pygame.sprite.Group(enemy_01, enemy_02)
-hero_plane = HeroPlaneSprite(object_path + "/images/hero.gif",
-                             hero_x, hero_y, plane_width, plane_height,3)
+hero_plane = HeroPlaneSprite(object_path + "/images/hero.gif",hero_x, hero_y, plane_width, plane_height,3)
 hero_group=pygame.sprite.Group(hero_plane)
 while True:
     clock.tick(60)  # 每秒执行60次

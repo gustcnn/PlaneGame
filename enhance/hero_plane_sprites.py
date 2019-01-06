@@ -12,5 +12,6 @@ class HeroPlaneSprite(Sprite):
         #self.rect=args#plane的x,y轴坐标,width,height
         self.rect=pygame.Rect(hero_x, hero_y, hero_width, hero_height)
         self.speed=speed
+
     def update(self):
         self.rect.y-=self.speed
